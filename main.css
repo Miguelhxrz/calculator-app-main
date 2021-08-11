@@ -1,0 +1,476 @@
+/* |---- Font ----| */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px
+}
+html{
+  font-size: 62.5%
+}
+:root {
+
+  /* |---- THEME 1 ----| */
+
+  /* |---- Variables Backgrounds ----| */
+  --very-desaturated-blue: rgb(58, 71, 100); /* (MAIN BACKGROUND) */
+  --very-desaturated-blue-key: rgb(35, 44, 67); /* (KEYPAD BACKGROUND) */
+  --very-desaturated-blue-screen: rgb(24, 32, 52); /* (SCREEN BACKGROUND) */
+  
+  /* |---- Variabeles Keys ----| */
+  --desaturated-blue: rgb(99, 112, 151); /* (KEY BACKGROUND) */
+  --desaturated-dark-blue: rgb(64, 78, 114); /* (KEY SHADOW) */
+
+  --Red: rgb(208, 63, 47); /* (KEY BACKGROUND, TOGGLE) */
+  --Dark-red: rgb(147, 38, 26); /* (KEY BACKGROUND, KEY SHADOW) */
+
+  --Light-grayish-orange: rgb(234, 227, 220); /* (KEY BACKGROUND)*/
+  --Grayish-orange: rgb(180, 165, 151); /* (KEY SHADOW) */
+
+  /* |---- Variables para texto ----| */
+  --Very-dark-grayish-blue: rgb(68, 75, 90);
+  --light-color: rgb(255,255,255);
+
+  /* |-----------------------------------------------------------------------------| */
+
+  /* |---- THEME 2 ----| */
+  --light-gray: rgb(230, 230, 230); /* (Main Background)*/
+  --grayish-red: rgb(209, 204, 204); /* (Toggle Background and Keypad) */
+  --very-light-grey: rgb(237, 237, 237); /* (Screen Bacground) */
+
+  /* |---- THEME 2 KEYS ----| */
+  --dark-moderated-cyan: rgb(55, 127, 134); /* (Key Background) */
+  --very-dark-cyan: rgb(27, 95, 101); /* (Key shadow) */
+
+  --orange: rgb(202, 85, 2); /* (Key Background, toggle) */
+  --dark-orange: rgb(137, 57, 1); /* (Key Shadow) */
+
+  --Light-grayish-yellow: rgb(229, 228, 225); /* (Key Background) */
+  --Dark-grayish-orange: rgb(166, 157, 145); /* (Key Shadow) */
+  
+  /* |---- THEME 2 TEXT ----| */
+  --Very-dark-grayish-yellow: rgb(53, 53, 44);
+  --White: rgb(255, 255, 255); /* (Text) */
+
+  /* |------------------------------------------------------------------------------| */
+
+  /* |---- THEME 3 ----| */
+  --Very-dark-violet: rgb(22, 6, 40); /* (Main Background) */
+  --Very-dark-violet2: rgb(29, 9, 52); /* (Toggle Background, Keypad Background, Screen Background) */
+
+  /* |---- THEME 3 KEYS ----| */
+  --Dark-violet: rgb(88, 7, 125); /*  (Key Background) */
+  --Vivid-magenta: rgb(188, 21, 244); /* (Key Shadow) */
+
+  --Pure-cyan: rgb(0, 224, 209); /* (key background, toggle) */
+  --Soft-cyan: rgb(108, 249, 242); /* (key shadow) */
+
+  --Very-dark-violet: rgb(52, 28, 79); /* (key background) */
+  --Dark-magenta: rgb(135, 28, 156); /* (key shadow) */
+
+  /* |---- THEME 3 TEXT ----| */
+  --Light-yellow: rgb(255, 229, 61);
+  --Very-dark-blue: rgb(27, 36, 40);
+  --White: rgb(255, 255, 255); /* (text) */
+
+  /* |------------------------------------------------------------------------------| */
+
+  /* |---- Font ----| */
+  --general: 'Spartan', sans-serif; /* (700) */
+}
+
+
+/* |---- Reset de estilos para botenes ----| */
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+body {
+  background-color: var(--very-desaturated-blue);
+  transition: .3s ease all;
+}
+
+body.theme-two {
+  background-color: var(--light-gray);
+}
+
+body.theme-three {
+  background-color: var(--Very-dark-violet);
+}
+
+/* |---- Calculator container ----| */
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  height: 670px;
+  padding: 23px;
+}
+
+/* |---- header and themes ----| */
+.header-calc{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 60px;
+  font-family: var(--general);
+  margin-bottom: 24px
+}
+
+.header-calc h2 {
+  font-size: 3rem;
+  color: var(--light-color);
+}
+
+body.theme-two h2 {
+  color: var(--Very-dark-grayish-yellow);
+}
+
+body.theme-three h2 {
+  color: var(--Light-yellow);
+}
+
+.theme-slct__container {
+  display: flex;
+  justify-content: space-between;
+  width: 187px;
+  height: 60px;
+  font-family: var(--general);
+  color: var(--light-color);
+}
+
+body.theme-two .theme-slct__container {
+  color: var(--Very-dark-grayish-yellow);
+}
+
+body.theme-three .theme-slct__container {
+  color: var(--Light-yellow);
+}
+
+
+.theme-slct__container .subtitle {
+  align-self: flex-end;
+  font-size: 1.7rem;
+  margin-right: 24px;
+}
+
+.theme-changer__container {
+  align-self: center;
+  width: 100px;
+  height: 65px;
+}
+
+.radio__container {
+  width: 100%;
+  height: 100%;
+}
+
+.number-themes {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  top: 10px;
+  height: 18px;
+}
+
+.number-themes h3 {
+  font-size: 1.5rem;
+}
+
+.number-themes label {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.themes-switch {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.lbl-theme {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  background-color: var(--very-desaturated-blue-key);
+  border-radius: 100px 0px 0px 100px;
+  cursor: pointer;
+}
+
+body.theme-two .lbl-theme {
+  background-color: var(--grayish-red);
+}
+
+body.theme-three .lbl-theme {
+  background-color: var(--Very-dark-violet2); 
+}
+
+.lbl-theme:nth-child(2) {
+  right: 1px;
+}
+
+.lbl-theme:nth-child(4) {
+  border-radius: 0px;
+  right: 2px;
+}
+
+.lbl-theme:nth-child(6) {
+  width: 120px;
+  border-radius: 0px 100px 100px 0px;
+  right: 3px;
+}
+
+.switch-ball {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 5;
+  width: 22px;
+  height: 22px;
+  background-color: var(--Red);
+  border-radius: 100px;  
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+body.theme-two .switch-ball {
+  background-color: var(--orange);
+}
+
+body.theme-three .switch-ball {
+  background-color: var(--Pure-cyan);
+}
+
+
+/* |---- Calculator Screen ----| */
+.screen-calc {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  background-color: var(--very-desaturated-blue-screen);
+  border-radius: 12px;
+  padding: 28px;
+  font-family: var(--general);
+  font-size: 2.4rem;
+  font-weight: 700;
+  overflow: hidden;
+  color: var(--light-color);
+}
+
+body.theme-two .screen-calc {
+  background-color: var(--very-light-grey) ;
+}
+
+body.theme-three .screen-calc {
+  background-color: var(--Very-dark-violet2);
+}
+
+/* |---- Keyboard Calculator ----| */
+.keyboard-calc {
+  display: grid;
+  grid-template-columns: repeat(4,60px);
+  grid-template-rows: repeat(5,60px);
+  gap: 13px;
+  width: 100%;
+  height: 421px;
+  background-color: var(--very-desaturated-blue-key);
+  margin-top: 23px;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+body.theme-two .keyboard-calc {
+  background-color: var(--grayish-red);
+}
+
+body.theme-three .keyboard-calc {
+  background-color: var(--Very-dark-violet2);
+}
+
+.btn-calc {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+body.theme-three .btn-calc {
+  background-color: var(--Very-dark-violet);
+  color: var(--Light-yellow);
+  box-shadow: 0px 4px 0px var(--Dark-magenta);
+}
+
+.operator{
+  background-color: var(--desaturated-blue);
+  box-shadow: 0px 4px 0px var(--desaturated-dark-blue);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--light-color);
+  border-radius: 7px;
+}
+
+body.theme-three .operator {
+  background-color: var(--Very-dark-violet);
+  color: var(--Light-yellow);
+  box-shadow: 0px 4px 0px var(--Dark-magenta);
+}
+
+body.theme-two .operator:nth-child(4) {
+  background-color: var(--dark-moderated-cyan);
+  box-shadow: 0px 4px 0px var(--very-dark-cyan);
+}
+
+body.theme-three .operator:nth-child(4) {
+  background-color: var(--Dark-violet);
+  box-shadow: 0px 4px 0px var(--Vivid-magenta);
+}
+
+.operator:nth-child(8) {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(12) {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(12) {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(15) {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(16) {
+  background-color: var(--Light-grayish-orange);
+  font-family: var(--general);
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: var(--Very-dark-grayish-blue);
+  border-radius: 7px;
+  box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(17) {
+  grid-column: span 2;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--light-color);
+  background-color: var(--desaturated-blue);
+  box-shadow: 0px 4px 0px var(--desaturated-dark-blue);
+  border-radius: 7px; 
+} 
+
+body.theme-two .operator:nth-child(17) {
+  background-color: var(--dark-moderated-cyan);
+  box-shadow: 0px 4px 0px var(--very-dark-cyan);
+}
+
+body.theme-three .operator:nth-child(17) {
+  background-color: var(--Dark-violet);
+  box-shadow: 0px 4px 0px var(--Vivid-magenta);
+}
+
+.operator:nth-child(18) {
+  grid-column: span 2;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--light-color);
+  background-color: var(--Red);
+  box-shadow: 0px 4px 0px var(--Dark-red);
+}
+
+body.theme-two .operator:nth-child(18) {
+  background-color: var(--orange);
+  box-shadow: 0px 4px 0px var(--dark-orange);
+}
+
+body.theme-three .operator:nth-child(18) {
+  background-color: var(--Pure-cyan);
+  color: rgb(0,0,0);
+  box-shadow: 0px 4px 0px var(--Soft-cyan);
+}
+
+
+
+.attribution a { 
+  color: rgb(255, 255, 255); 
+}
+.attribution { 
+  font-size: 1.1rem; 
+  text-align: center;
+}
+
+@media only screen and (min-width: 1366px) {
+  .calc-container {
+    width: 535px;
+    height: 697px;
+    margin: 0px auto;
+  }
+
+  .header-calc {
+    width: 512px;
+  }
+
+  .screen-calc {
+    width: 512px;
+    height: 123px;
+  }
+
+  .keyboard-calc {
+    grid-template-columns: repeat(4,96px);
+    grid-template-rows: repeat(5,58px);
+    justify-content: center;
+    gap: 23.5px;
+    width: 512px;
+    height: 455px;
+    padding: 28px;
+  }
+
+}

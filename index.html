@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./index.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body>
+
+  <main class="calc-container">
+
+    <section class="header-calc">
+      <h2>Calc</h2>
+      <article class="theme-slct__container">
+        <h3 class="subtitle">THEME</h3>
+        <div class="theme-changer__container">
+          <div class="number-themes">
+            <label for="theme-one">
+              <h3>1</h3>
+            </label>
+            <label for="theme-two">
+              <h3>2</h3>
+            </label>
+            <label for="theme-three">
+              <h3>3</h3>
+            </label>
+          </div>
+          <div class="themes-switch">
+            <!-- theme One -->
+            <input type="radio" name="theme" id="theme-one" value="1">
+            <label for="theme-one" class="lbl-theme">
+              <div class="switch-ball" id="switch-ball"></div>
+            </label>
+            <!-- theme two-->
+            <input type="radio" name="theme" id="theme-two" value="2">
+            <label for="theme-two" class="lbl-theme"></label>
+            <!-- theme three -->
+            <input type="radio" name="theme" id="theme-three" value="3">
+            <label for="theme-three" class="lbl-theme"></label>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen-calc">
+      <h2 class="result" id="result">0</h2>
+    </section>
+
+    <section class="keyboard-calc">
+      <button class="btn-calc" value="7">7</button>
+      <button class="btn-calc" value="8">8</button>
+      <button class="btn-calc" value="9">9</button>
+      <button class="operator" value="DEL">DEL</button>
+      <button class="btn-calc" value="4">4</button>
+      <button class="btn-calc" value="5">5</button>
+      <button class="btn-calc" value="6">6</button>
+      <button class="operator" value="PLUS">+</button>
+      <button class="btn-calc" value="1">1</button>
+      <button class="btn-calc" value="2">2</button>
+      <button class="btn-calc" value="3">3</button>
+      <button class="operator" value="NEG">-</button>
+      <button class="btn-calc" value=".">.</button>
+      <button class="btn-calc" value="0">0</button>
+      <button class="operator" value="SLASH">/</button>
+      <button class="operator" value="MULT">x</button>
+      <button class="operator" value="RESET">RESET</button>
+      <button class="operator" value="RESULT">=</button>
+    </section>
+
+
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">MiguelHxrz</a>.
+  </footer>
+</body>
+
+</html>
